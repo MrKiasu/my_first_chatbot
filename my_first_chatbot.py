@@ -27,7 +27,7 @@ def load_data():
 
         # Load the finetuned model 
         ft_model_name = "ft:gpt-3.5-turbo-0613:personal::80aOEYbP"
-        ft_context = ServiceContext.from_defaults(llm=OpenAI(model=ft_model_name, temperature=0.2), context_window=2048, system_prompt="You are an expert on the PSD organisation and your job is to answer questions related to the organisation. Assume that all questions are related to the PSD organisation. Keep your answers technical and based on facts – do not hallucinate features.")
+        ft_context = ServiceContext.from_defaults(llm=OpenAI(model=ft_model_name, temperature=0.0), context_window=2048, system_prompt="You are an expert on the PSD organisation and your job is to answer questions related to the organisation. Assume that all questions are related to the PSD organisation. Keep your answers technical and based on facts – do not hallucinate features.")
         return index
 
 index = load_data()
